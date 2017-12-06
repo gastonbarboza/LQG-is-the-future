@@ -1,0 +1,237 @@
+% !TeX spellcheck = es_AR
+\documentclass[12pt,a4paper]{article}
+
+%Packages
+
+%%% Geometria y fuente %%%
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage{geometry}
+\geometry{a4paper,left=20mm,right=20mm,top=25mm,bottom=25mm}
+\usepackage{bookman} % font
+\usepackage{authblk} % estilo de titulo, autor y afiliación
+\renewcommand*{\Authfont}{\small\itshape}
+\renewcommand*{\Affilfont}{\small\itshape}
+\usepackage{setspace} % para modificar el interlineado
+%\setlength\parindent{0pt}  elimina sangría de todos los parrafos
+
+
+%%% Mathematical tools %%%
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\numberwithin{equation}{section}
+\usepackage{amssymb}
+\usepackage{bm}
+
+
+%%% Box and colors %%%
+\usepackage{color}
+\usepackage{tcolorbox}
+\newtcolorbox{boxumen}{colback=white,colframe=teal,boxrule=1pt}
+\newtcolorbox{boxquation}{colback=white,colframe=black,boxrule=1pt}
+
+
+%%% Capital Letter %%%
+\usepackage{lettrine} % letra capital}
+\setcounter{DefaultLines}{4}
+\setlength{\DefaultFindent}{7pt}
+\setlength{\DefaultNindent}{0pt}
+\renewcommand{\LettrineFontHook}{\usefont{U}{yinit}{m}{n}}
+\renewcommand{\DefaultLoversize}{-0.70}
+\usepackage{yfonts}
+%Primero se declara el paquete lettrine y el numero de renglones que debe abarcar la inicial. En seguida DefaultFindent, la distancia de la inicial a la letra siguiente en el primer renglón y DefaultNindent, la distancia que se desplaza a la derecha del inicio del primer renglón, los renglones subsecuentes que abarca la capitular.Después se declara la font a utilizar, en este caso yinit, con unos parámetros que la describen, y ﬁnalmente el tamaño de la letra.
+
+
+%%% Pagestyle %%%
+\usepackage{fancyhdr}
+
+\fancypagestyle{lab}{
+\fancyhf{}
+\rhead{{\color{brown!60!black}\Large\Coffeecup}}
+\lhead{\textit{\small{Laboratorio 6}}}
+\fancyfoot{}
+%\lfoot{\tiny{}}
+\rfoot{\thepage}
+}
+\fancypagestyle{informe}{
+	\fancyhf{}
+	\rhead{{\color{brown!60!black}\Large\Coffeecup}}
+	\lhead{\textit{\small{Informe de Avance}}}
+	\fancyfoot{}
+	%\lfoot{\tiny{}}
+	\rfoot{\thepage}
+}
+
+
+%Title
+
+
+\title{\vspace{-20pt}\Large{\textbf{\textcolor{teal}{Construcción de detectores de muones con centellador plástico para la caracterización de detectores de partículas por Cherenkov en agua}}}}
+
+\date{}
+
+\author{Barboza Gastón y Codina Tomás} 
+\affil{Instituto de Astronomía y Física del Espacio FCEyN, UBA}
+\affil{barboza.gaston@gmail.com, tomycodina@gmail.com}
+
+
+
+
+%Document
+\begin{document}
+
+
+\maketitle
+\thispagestyle{lab}
+
+\begin{center}
+\vspace{-40pt}\rule{\textwidth}{0.2pt}
+\end{center}
+
+\setstretch{1.5} % Interlineado 1.5
+
+\begin{boxumen}
+insert abstract here
+\end{boxumen}
+
+\section{Introducción}
+
+
+Los rayos cósmicos (RC) llegan a la tierra desde todas direcciones
+del espacio con energías que van desde alrededor de 1 GeV hasta cientos
+de EeV (1018eV ). Los detectores de RC son utilizados por muchos
+experimentos que necesitan observar estos rayos con distintos propósitos;
+por ejemplo el Observatorio LAGO los utiliza para el estudio de la
+actividad solar, o el Observatorio Pierre Auger para investigar el origen
+de los RC ultraenergéticos.
+
+Este tipo de observatorios pueden utilizar
+uno o muchos (arreglo) detectores individuales, cuyas características
+deben ser estudiadas para determinar sus condiciones de diseño. Para
+este tipo de desarrollo se utilizan detectores auxiliares que permiten
+identificar la trayectoria y naturaleza de alguna partícula que entra al
+detector, lo cual permite estudiar el tipo de señal que este genera. Un
+tipo particular de detector auxiliar es el comúnmente llamado ''paleta
+centelladora'', un detector de reducidas dimensiones que consta de
+un centellador plástico con un detector óptico adosado que registra los
+pulsos de luz producidos en el centellador al ser atravesado por una
+partícula cargada. El objetivo del trabajo a realizar en laboratorio 6 consiste en construir y caracterizar los componentes básicos de estas paletas centelladoras.
+
+
+
+\section{Montaje Experimental y Adquisición}
+
+%se utilizó la tecnología del detector AMIGA del Observatorio Pierre Auger\cite{pierreauger}.
+
+El elemento básico de cualquier paleta centelladora consta de una sola barra centelladora recorrida en
+su longitud por fibras ópticas que colectan la luz producida por el centellador y la guían
+hacia un tubo fotomultiplicador (PMT).
+
+Para la construcción de nuestro detector pequeño, se tuvo en cuenta que el PMT resulta ser muy sensible a la luz, con lo que se necesita un entorno completamente oscuro para realizar las mediciones. Debido a esto, previo a crear los detectores, se construyó una caja de madera de  $ 92x42x20 cm^3 $ con tapa y totalmente cubierta de aluminio, con dos agujeros para la entrada y salida de cables. Para los primeros, se utilizó un conector circular de 3 patas, por dos de ellas ingresaban la alimentación de los detectores (positivo y negativo), mientras que la tercer pata tenía un LED del lado externo de la caja, conectado al circuito interno que indicaba si circulaba o no corriente por los PMT's. Para los cables de salida, se usó un tubo de cañerías de PVC curvo. Luego, los lugares más propensos a dejar ingresar luz, como por ejemplo, los bordes de las tapas, fueron recubiertos con felpa negra.
+Finalmente, como mecanismo de seguridad se utilizaron dos switch's ubicados en los extremos de la caja, los cuales cortaban la corriente del circuito interno de los detectores al abrirse la tapa y cerraban el circuito al tapar la caja. La caja puede verse en la imagen xxx\\
+
+Imagen a: Foto caja Imagen b: Switch en la caja\\
+
+ 
+Luego, para los detectores, se utilizaron cuatro placas centelladoras plásticas de  $ 20x4 cm^2 $ las cuales tenían una guía en el medio por donde se introducían dos fibras ópticas ''Waveshifter''. Para aumentar la señal se utilizaron dos placas para cada detector, ubicandolas una encima de la otra, alineadas con respecto a sus guías y adheridas con cinta de papel como muestra la figura YYY.\\
+
+
+Imagen: placas pegadas con la fibra dentro\\
+ 
+Los extremos salientes de las fibras ópticas ingresaban a uno de los 16 pines que tenían los fotomultiplicadores Hamamatsu H8711, los cuales estaban enchufados a unas placas de alto voltaje Hamamatsu C4900 con un conector de salida de señal disponible para cada pin. El voltaje suministrado por la placa al PMT se varío durante las distintas pruebas con un potenciometro para encontrar la respuesta óptima en ambos detectores.
+
+Luego, para obtener el alto voltaje, las placas eran alimentadas con una fuente continua de $ 12V $ MCP M10-TP 3005H por medio de la ficha de 3 puntas y finalmente el conector de la placa correspondiente al pin en uso se soldaba a un cable BNC, que salía por el tubo de PVC, e ingresaba en un osciloscopio Tektronix DPO 3054 el cual se manejó con una computadora mediante scripts en Python. 
+
+Dado que se realizaron dos tipos de mediciones, uno correspondiente a la caracterización de los detectores por separado y otro la medición de coincidencias, Las posiciones de las placas variaron en uno u otro caso. Para las curvas de calibración (donde se midió el Rate de muones en función del voltaje de salida), la caja se ubicó con su lado mayor en forma horizontal y ambos detectores en distintas posiciones pero unidos por los cables de la fuente de $ 12V $. Por otro lado, para conincidencias se utilizaron dos configuraciones distintas. En la primera, se dejo la caja en la misma posición y se solaparon ambos centelladores uno sobre el otro. En la segunda, para variar la distancia entre centelladores, se utilizó la caja en forma vertical introduciendo un banco de madera fabricado en la tornería del IAFE para apoyar encima de él uno de los detectores, con esto se logró tener ambas placas distanciadas $ 50 cm $. Todo el circuito de la configuración horizontal y vertical puede apreciarse en la imagen XXX\\
+
+IMAGEN (a(horizontal) y b(vertical))\\
+
+Para la adquisición de datos, el osciloscopio se utilizó de dos formas diferentes dependiendo del tipo de medición. Para la calibración, los pulsos de voltajes salientes del detector en cuestión se llevaban a los canales 1 y 2 por medio de un BNC. Luego, se discriminaban los pulsos según un \textbf{Threshold mínimo}, los pulsos que pasaban dicho umbral, eran registrados por el osciloscopio. La forma de contar cuantos pulsos se detectaban era mediante la cantidad de veces que el dispositivo triggereaba la señal. Con estas herramientas, se variaba de forma automática el thresshold mínimo cada un cierto tiempo, recolectando el número total de triggers durante ese periodo. Este último número se graficaba en función del threshold mínimo con lo que se obtenía la curva de calibración. 
+
+Por otro lado, para detectar coincidencias, se utilizó la función \textbf{Setup and Hold} del osciloscopio el cual utilizaba ambos canales (uno para cada detector) tomando el canal 1 de ellos como referencia. Esta función tomaba los valores de referencia que superasen un cierto threshold para iniciar un temporizador, luego, se fijaba en el canal 2 si aparecía un pulso que superase otro threshold y esté dentro de una dada ventana temporal. De esta forma, si d dichas condiciones se cumplían, el oscoloscopio trigereaba, lo que considerábamos un evento. De esta forma, teniendo en cuenta los retardos entre cables y velocidades de respuesta de los PMT's, se  fijaba una ventana temporal razonable y luego se barrían distintos Thresholds de forma automática para obtener finalmente el gráfico de eventos en función de Thresholds o, utilizando la curva de calibración, Rates.
+
+\section{Resultados y discusiones}
+
+\begin{center}
+\rule{\textwidth}{0.2pt}
+\end{center}
+
+Previo a la calibración, el primer paso fue el estudio de los pulsos emitidos por los PMT's, sin placa centelladora. Esto nos dio una idea de la forma, amplitud y frecuencia de los pulsos provenientes del ruido de fondo. También se estudió la dependencia de estos parámetros con el alto voltaje y los pines, relación que resultó ser muy distinta para cada PMT. Para todas las mediciones se utilizaron los pines xxx y xxx con voltajes $ 852V $ y $ xxxV $ respectivamente, esta configuración daba amplitudes distintas para los pulsos de uno y otro PMT, aunque el ancho y espaciado temporal mínimo entre ellos \footnote{Esta frecuencia máxima corresponde a los pulsos de amplitudes menos negativas} resultó ser aproximadamente similar en ambos, siendo $ 6 ns $ y $ 160 ms $ respectivamente.
+
+Con estos análisis, se paso a introducir las placas centelladores para levantar las curvas de calibración. Para cada PMT se realizó un barrido de la cantidad de pulsos detectados por minuto en función del threshold establecido en el osciloscopio. Los mismos se variaron de xxx mv a xxx mv para un PMT y xxx mv a xxx mv para el otro, el porqué de dicho rango se explicará más adelante. Lo que se observó es que cuando los PMTs son expuestos a luz ambiental aún estando apagados, quedan ''excitados'' y envían pulsos causados por fotones térmicos. Al dejarlos encerrados en oscuridad, se observó que aún después de xxx días la cantidad de pulsos registrado por cada PMT continuaba disminuyendo, indicando que el PMT continuaba enfriándose, como puede verse en la figura comparativa xxx.\\
+
+FIGURA\\
+
+Esto dificulta saber qué tasa de eventos tiene un PMT a un threshold dado, pero la situación se remedia al medir pulsos en coincidencia, como se muestra más adelante.
+
+(¿Deberíamos poner algo sobre como varían estas curvas de calibración con y sin centellador?)
+
+Insertar figura susodicha; una compilación de todas las curvas de PMT.\\
+
+
+Luego de las curvas de calibración y previo a la medición de coincidencias, se estudió la función Setup and Hold del osciloscopio, ya que jugó un papel clave en la medición de eventos. Para ello, se dedicó unos días a estudiar su funcionamiento simulando coincidencias con dos generadores de pulsos HP8013B y Rigol DG5101. Dicho estudio nos permitió ver la precisión y limitaciones de la ventana temporal así como los threshold mínimos y máximos permitidos.
+
+Hecho esto, para medir coincidencias con los PMT's con xxx días de oscuridad, se utilizó la calibración con las mismas condiciones (figura xxx). Con ella, se escribió un script en Python que invertía la curva y calculaba, dada una tasa de eventos deseada, qué threshold necesita cada PMT para lograrla. Con esta información y utilizando el montaje de la figura xxx, se hizo un barrido de coincidencias entre placas en función de tasa de pulsos. Los resultados corresponden a la curva azul de la figura xxx. En ella, se consideraba una coincidencia si dos pulsos ocurrían distanciados en el tiempo por 17ns y superaban el threshold pedido: este threshold era calculado por el script de manera tal que ambos PMTs disparaban a una tasa conocida. Se eligió la ventana de $ 17 ns $ por la consideración de que los pulsos térmicos tenían un espaciado mínimo de $ 160 ms $ como se mencionó anteriormente, mientras que los muones viajando a una velocidad cercana a la de la luz, tardarían $ 0.1 ns $ en atravesar los $ 3 cm $ de grosor entre paletas. Si bien a este último tiempo se le debe agregar el retardo de emisión de los átomos dentro del centellador (del orden de ns) y la respuesta de la electrónica involucrada (PMT, cables,etc), todo esto no llega a ser comparable con el tiempo entre pulsos térmicos, por lo que dentro de esta ventana temporal caerán auténticos muones con un error dado por las \textbf{coincidencias casuales}. Estas últimas tiene una formula dada por\cite{coincidencias_casuales} (necesitamos esta referencia)
+ 
+\begin{equation}
+R_{casual}= 2 R_1 R_2 \tau
+\end{equation}
+
+donde $ R_1 $ y $ R_2 $ son la tasa de pulsos de cada detector y $ \tau $ la ventana temporal ($ 17 ns $). Si uno remplaza los valores de $ R_1 $ y $ R_2 $ máximos usados en las mediciones, puede verse que las coincidencias casuales rondan el $ 0.1 \% $, siendo despeciables para los eventos muónicos. Este número se buscó apropósito y es el responsable de haber utilizado xxx mv como Voltaje mínimo en la curva de calibración. Por otro lado, el porqué del máximo threshold es simplemente que no se registraban eventos más a allá de dicho valor.
+Luego, se repitió el experimento exponiendo los PMTs a luz para ver si el aumento de pulsos afectaría las coincidencias; la curva roja de la figura (?) indica que no.\\
+
+FIGURA(azul y roja)\\
+
+(capaz deberíamos meter un poco de discución acerca de la forma de la curva, la meseta y demás.)
+
+
+Para levantar esta segunda curva, si bien los PMTs estaban ''en caliente'' y disparando con un gran número de eventos, se usó la calibración de los PMTs con (?) días de oscuridad, en el sentido de que se establecieron thresholds que ya no se correspondían con la tasa de eventos reales que el PMT estaba midiendo, sino con la tasa que medirían tras (?) días. Esto se hizo bajo la suposición de que todos los eventos agregados serían de origen térmico y que entonces no contribuirían a las coincidencias, suposición que se vio corroborada.
+
+El último experimento constó de separar las placas y ver si el número de coincidencias disminuía. Efectivamente en la figura xxx se aprecia bla bla bla\\
+
+FIGURA\\
+
+
+\begin{center}
+\rule{\textwidth}{0.2pt}
+\end{center}
+
+\vspace{50cm}
+
+Para cada PMT se realizó una calibración de la cantidad de eventos (\textcolor{red}{pulsos}) detectados por minuto en función del threshold establecido en el osciloscopio. Cuando los PMTs son expuestos a luz ambiental aún estando apagados, quedan (??) y envían pulsos causados por fotones térmicos. Al dejarlos encerrados en oscuridad, se observó que aún después de (?) días la cantidad de eventos (\textcolor{red}{pulsos}) por minuto registrado por cada PMT continuaba disminuyendo, indicando que el PMT continuaba enfriándose, como puede verse en la figura (?). Esto dificulta saber qué tasa de eventos tiene un PMT a un threshold dado, pero la situación se remedia al medir pulsos en coincidencia, como se muestra más adelante
+	Insertar figura susodicha;una compilación de todas las curvas de PMT.
+
+	Se optó por usar la calibración en la cual los PMTs estuvieron en oscuridad por (?) días. Usándola, se escribió un script que invertía la curva y calculaba, dada una tasa de eventos deseada, qué threshold necesita cada PMT para lograrla. Con esta información, se hizo un barrido de coincidencias entre placas en función de tasa de eventos. Se consideraba una coincidencia si dos pulsos ocurrían distanciados en el tiempo por 17ns y superaban el threshold pedido: este threshold era calculado por el script de manera tal que ambos PMTs disparaban a una tasa conocida. Se eligió la ventana de 17ns por la consideración de que, con un grosor de (?) cm, un muón viajando a una velocidad cerca a la luz tardaría (?) en atravesarlas. (Algo sobre átomos (??)). El resultado fue la curva azul de la figura (?). Luego se expuso los PMTs a luz para ver si el aumento de eventos afectaría las coincidencias; la curva roja de la figura (?) indica que no. Para levantar esta segunda curva, si bien los PMTs estaban ``en caliente'' y disparando con un gran número de eventos, se usó la calibración de los PMTs con (?) días de oscuridad, en el sentido de que se establecieron thresholds que ya no se correspondían con la tasa de eventos reales que el PMT estaba midiendo, sino con la tasa que medirían tras (?) días. Esto se hizo bajo la suposición de que todos los eventos agregados serían de origen térmico y que entonces no contribuirían a las coincidencias, suposición que se vio corroborada.\footnote{Hay que hablar de la fórmula de coincidencias casuales en algún momento.}
+
+Insertar figura maestra
+
+Hablar sobre falta de meseta o presencia de meseta en la curva.
+
+\section{Conclusiones}
+
+BLA BLA BLA
+
+\section{Agradecimientos}
+
+\begin{thebibliography}{9}
+	
+	\bibitem{pierreauger}
+	Claude Itzykson \& Jean-Bernard Zuber,
+	\textit{Quantum Field Theory},
+	Capítulos 3.2 y 3.3.
+	
+	\bibitem{coincidencias_casuales}
+	Lewis H.Ryder,
+	\textit{Quantum Field Theory},
+	Capítulo 9.
+	
+	\bibitem{Peskin}
+	Michael E. Peskin \& Daniel V. Schoeder,
+	\textit{An introduction to Quantum Field Theory},
+	Capítulos 6, 7 y 10.
+	
+\end{thebibliography}
+
+\end{document}
